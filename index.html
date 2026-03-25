@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BridgeFire Ventures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── DESIGN TOKENS ─────────────────────────────── */
+    :root {
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-mono: 'DM Mono', monospace;
+
+      /* Type scale — standardised, never deviate */
+      --text-xs:   11px;
+      --text-sm:   13px;
+      --text-base: 15px;
+      --text-md:   17px;
+      --text-lg:   22px;
+      --text-xl:   28px;
+      --text-2xl:  36px;
+      --text-3xl:  48px;
+
+      --lh-tight:  1.2;
+      --lh-normal: 1.6;
+      --lh-loose:  1.8;
+
+      /* Spacing */
+      --nav-h: 58px;
+      --r-sm:  6px;
+      --r-md:  10px;
+      --r-lg:  14px;
+
+      /* CEO colours — same in all themes */
+      --c-arjun:  #f59e0b;
+      --c-sakura: #ec4899;
+      --c-cipher: #8b5cf6;
+      --c-pixel:  #eab308;
+      --c-echo:   #10b981;
+      --c-atlas:  #3b82f6;
+      --c-gold:   #f59e0b;
+    }
+
+    /* ── LIGHT THEME ───────────────────────────────── */
+    body.light {
+      --bg:        #ffffff;
+      --bg-subtle: #fafafa;
+      --bg-card:   #ffffff;
+      --border:    rgba(0,0,0,0.08);
+      --border-md: rgba(0,0,0,0.14);
+      --text:      #0a0a0a;
+      --text-2:    #3a3a3a;
+      --text-3:    #6b6b6b;
+      --text-4:    #999999;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --nav-bg:    rgba(255,255,255,0.85);
+    }
+
+    /* ── DARK THEME ────────────────────────────────── */
+    body.dark {
+      --bg:        #000000;
+      --bg-subtle: #0a0a0a;
+      --bg-card:   #111111;
+      --border:    rgba(255,255,255,0.08);
+      --border-md: rgba(255,255,255,0.14);
+      --text:      #ededed;
+      --text-2:    #c2c2c2;
+      --text-3:    #888888;
+      --text-4:    #555555;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.6);
+      --nav-bg:    rgba(0,0,0,0.85);
+    }
+
+    /* ── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      line-height: var(--lh-normal);
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.15s, color 0.15s;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    button { font-family: var(--font-sans); cursor: pointer; }
+
+    /* ── SCROLLBAR ─────────────────────────────────── */
+    ::-webkit-scrollbar { width: 4px; }
+    body.light ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 2px; }
+    body.dark  ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+    /* ── PAGE OFFSET FOR FIXED NAV ─────────────────── */
+    #root { padding-top: var(--nav-h); }
+  </style>
+</head>
+<body class="dark">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
